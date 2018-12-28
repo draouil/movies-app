@@ -41,8 +41,12 @@ class App extends Component {
     let { data_mv } = this.props;
     let data_mv_res = data_mv.filter(
       obj =>
-        obj.title.toLowerCase().includes(value.toLowerCase()) ||
-        obj.overview.toLowerCase().includes(value.toLowerCase())
+        obj.title
+          .toLowerCase()
+          .includes(
+            value.toLowerCase()
+          ) /*||
+        obj.overview.toLowerCase().includes(value.toLowerCase())*/
     );
     /*pass a value to recducer */
 

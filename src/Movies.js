@@ -106,6 +106,10 @@ class Movies extends Component {
         <div className="filter">
           {/* button filter*/}
           <Icon className="filter icon" onClick={this.toggelModalFavorit} />
+          <Icon
+            className="sort numeric down icon"
+            onClick={this.toggelModalFavorit}
+          />
           <ModalFilterList
             handleChangeFilter={(Begin, End) =>
               //take result { filter, datefrom }Filter (children) with methode handleChangeFilter send to Filter
