@@ -32,11 +32,12 @@ class Movies extends Component {
       data_mvFilter: this.props.data_mv,
       clear: false,
 
+      tri: false,
+      triDec: false,
+
       filters: {
         to: "",
-        from: "",
-        tri: false,
-        triDec: false
+        from: ""
       }
     };
   }
@@ -143,14 +144,14 @@ class Movies extends Component {
         </div>
         <div className="tri">
           <Icon
-            className="sort numeric up icon"
-            onClick={() => this.setState({ tri: true })}
+            className="sort numeric down icon"
+            onClick={() => this.setState({ tri: true, triDec: false })}
           />
         </div>
         <div className="tri">
           <Icon
-            className=" sort numeric down icon"
-            onClick={() => this.setState({ triDec: true })}
+            className=" sort numeric up icon"
+            onClick={() => this.setState({ triDec: true, tri: false })}
           />
         </div>
 
